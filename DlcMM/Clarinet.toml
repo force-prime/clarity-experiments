@@ -1,0 +1,26 @@
+[project]
+name = "DlcMM"
+authors = []
+description = ""
+telemetry = false
+requirements = []
+cache_dir = "D:\\WorkDir\\stacks\\DlcMM\\.\\.requirements"
+boot_contracts = ["pox", "costs-v2", "bns"]
+[contracts.mm-deposit-dlc]
+path = "contracts/mm-deposit-dlc.clar"
+
+[contracts.mm-dlc]
+path = "contracts/mm-dlc.clar"
+
+[repl]
+costs_version = 2
+parser_version = 2
+
+[repl.analysis]
+passes = ["check_checker"]
+
+[repl.analysis.check_checker]
+strict = false
+trusted_sender = false
+trusted_caller = false
+callee_filter = false
